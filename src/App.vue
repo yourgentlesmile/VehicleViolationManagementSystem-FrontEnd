@@ -1,23 +1,40 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+    <div style="display: flex;" id="app">
+        <nav-left></nav-left>
+        <div class="right-main-area">
+            <el-row>
+                <el-col :span="24">
+                    <nav-top></nav-top>
+                </el-col>
+                <el-col>
+                    <router-view/>
+                </el-col>
+            </el-row>
+        </div>
+    </div>
+
 </template>
 
 <script>
+import NavLeft from "./components/Nav/Nav-Left";
+import NavTop from "./components/Nav/Nav-Top";
+
 export default {
-  name: 'App'
+    components: {
+        NavTop,
+        NavLeft},
+    name: 'App'
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    /*清除浏览器默认的padding和margin*/
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #2F4050;
+    }
+    .right-main-area{
+        flex: 1;
+    }
 </style>
