@@ -30,7 +30,8 @@
     export default {
         components: {
             ElBadge,
-            ElButton},
+            ElButton
+        },
         name: "nav-top",
         data:function(){
             return {

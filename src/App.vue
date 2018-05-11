@@ -6,7 +6,7 @@
                 <el-col :span="24">
                     <nav-top></nav-top>
                 </el-col>
-                <el-col>
+                <el-col style="background: white">
                     <router-view/>
                 </el-col>
             </el-row>
@@ -22,7 +22,8 @@ import NavTop from "./components/Nav/Nav-Top";
 export default {
     components: {
         NavTop,
-        NavLeft},
+        NavLeft,
+    },
     name: 'App'
 }
 </script>
@@ -32,7 +33,7 @@ export default {
     body{
         margin: 0;
         padding: 0;
-        background-color: #2F4050;
+        overflow-x:hidden;
     }
     .right-main-area{
         flex: 1;

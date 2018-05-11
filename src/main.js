@@ -7,6 +7,9 @@ import ElementUI from 'element-ui'
 import Vuex from 'vuex'
 import store from '../vuex/store'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
